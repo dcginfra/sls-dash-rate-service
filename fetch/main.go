@@ -99,12 +99,12 @@ func fetchAndStoreRates() error {
 	// 2. For each exchange, pull the rate and convert to USD amounts if needed
 	//    (using BTC/USD rate).
 	apis := []dashrates.RateAPI{
-		//dashrates.NewBinanceAPI(),
-		//dashrates.NewKrakenAPI(),
-		//dashrates.NewBitfinexAPI(),
-		//dashrates.NewPoloniexAPI(),
+		dashrates.NewBinanceAPI(),
+		dashrates.NewKrakenAPI(),
+		dashrates.NewBitfinexAPI(),
+		dashrates.NewPoloniexAPI(),
 		//dashrates.NewHuobiAPI(),
-		//dashrates.NewBittrexAPI(),
+		dashrates.NewBittrexAPI(),
 		//dashrates.NewLivecoinAPI(),
 		//dashrates.NewExmoAPI(),
 		dashrates.NewHitBTCAPI(),
@@ -118,10 +118,11 @@ func fetchAndStoreRates() error {
 		//dashrates.NewKuCoinAPI(),
 		dashrates.NewBiboxAPI(),
 		dashrates.NewWhiteBITAPI(),
-		//dashrates.NewCointradeAPI(),
+		dashrates.NewCointradeAPI(),
 		//dashrates.NewOKExAPI(),
 		dashrates.NewBvnexAPI(),
 		dashrates.NewSouthXchangeAPI(),
+		dashrates.NewUpholdAPI(),
 	}
 
 	var wg sync.WaitGroup
