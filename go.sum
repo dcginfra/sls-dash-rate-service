@@ -6,6 +6,8 @@ github.com/go-redis/redis v6.15.5+incompatible h1:pLky8I0rgiblWfa8C1EV7fPEUv0aH6
 github.com/go-redis/redis v6.15.5+incompatible/go.mod h1:NAIEuMOZ/fxfXJIrKDQDz8wamY7mA7PouImQ2Jvg6kA=
 github.com/go-redis/redis v6.15.7+incompatible h1:3skhDh95XQMpnqeqNftPkQD9jL9e5e36z/1SUm6dy1U=
 github.com/go-redis/redis v6.15.7+incompatible/go.mod h1:NAIEuMOZ/fxfXJIrKDQDz8wamY7mA7PouImQ2Jvg6kA=
+github.com/go-redis/redis v6.15.8+incompatible h1:BKZuG6mCnRj5AOaWJXoCgf6rqTYnYJLe4en2hxT7r9o=
+github.com/go-redis/redis v6.15.8+incompatible/go.mod h1:NAIEuMOZ/fxfXJIrKDQDz8wamY7mA7PouImQ2Jvg6kA=
 github.com/nmarley/dashrates v0.0.0-20190819191145-b13c337d7293 h1:Mp4m1xPs43RaZf1Yn2CgOs/7jRiZ72jWhwP6YiwyJ+4=
 github.com/nmarley/dashrates v0.0.0-20190819191145-b13c337d7293/go.mod h1:aGouMFkZKrrcr9WF1Y/HF+2vgSsQMh2A0JsNsAiBWnQ=
 github.com/nmarley/dashrates v0.0.0-20190904183643-3e3725f82a51 h1:i15LwZ42W8yncxcT4dqIwmVvKr2oGmORcLSLDRXKbdM=
@@ -22,3 +24,5 @@ github.com/strophy/dashrates v0.0.0-20200312223414-3b2e397efd23 h1:HIFVlVUOpZhyg
 github.com/strophy/dashrates v0.0.0-20200312223414-3b2e397efd23/go.mod h1:XeiCAHyjpMS//wYIVteqRqJw7EQMCQRY+t1F8nIxXNw=
 github.com/strophy/dashrates v0.0.0-20200625015803-b12d9ebeb479 h1:WV0W8Q9W4daTavP7C0DrFCEjR8p8O3WasheBDRmpIow=
 github.com/strophy/dashrates v0.0.0-20200625015803-b12d9ebeb479/go.mod h1:XeiCAHyjpMS//wYIVteqRqJw7EQMCQRY+t1F8nIxXNw=
+github.com/strophy/dashrates v0.0.0-20200625051146-a1ed73bba638 h1:F/Ez6ARy84E45ssbmOFrp8Vwqx4AochHVgZp0SKm8sI=
+github.com/strophy/dashrates v0.0.0-20200625051146-a1ed73bba638/go.mod h1:XeiCAHyjpMS//wYIVteqRqJw7EQMCQRY+t1F8nIxXNw=
