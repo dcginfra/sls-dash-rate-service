@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/nmarley/sls-dash-rate-service#readme",
   "devDependencies": {
-    "serverless-domain-manager": "^3.3.0"
+    "serverless-domain-manager": "^3.3.2"
   }
 }
