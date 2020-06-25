@@ -124,6 +124,7 @@ func fetchAndStoreRates() error {
 		dashrates.NewSouthXchangeAPI(),
 		dashrates.NewUpholdAPI(),
 		dashrates.NewBitbnsAPI(),
+		dashrates.NewLiquidAPI(),
 	}
 
 	var wg sync.WaitGroup
