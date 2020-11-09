@@ -109,7 +109,7 @@ func fetchAndStoreRates() error {
 		//dashrates.NewExmoAPI(),
 		dashrates.NewHitBTCAPI(),
 		//dashrates.NewYobitAPI(),
-		//dashrates.NewCexAPI(),
+		dashrates.NewCexAPI(),
 		//dashrates.NewBigONEAPI(),
 		dashrates.NewCoinbaseProAPI(),
 		dashrates.NewCoinbaseAPI(),
