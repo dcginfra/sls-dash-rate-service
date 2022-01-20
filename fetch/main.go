@@ -9,8 +9,8 @@ import (
 	"sync"
 	"time"
 
+	"github.com/dcginfra/dashrates"
 	"github.com/go-redis/redis"
-	"github.com/strophy/dashrates"
 
 	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
@@ -125,6 +125,7 @@ func fetchAndStoreRates() error {
 		dashrates.NewUpholdAPI(),
 		dashrates.NewBitbnsAPI(),
 		dashrates.NewLiquidAPI(),
+		dashrates.NewTrivAPI(),
 	}
 
 	var wg sync.WaitGroup
