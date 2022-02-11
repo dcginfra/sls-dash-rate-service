@@ -38,10 +38,9 @@ provider:
     REDIS_URL: ${file(config.${self:provider.stage}.yaml):redisURL}
 
 package:
-  exclude:
-    - ./**
-  include:
-    - ./bin/**
+  patterns:
+    - "!./**"
+    - "./bin/**"
 
 functions:
 
