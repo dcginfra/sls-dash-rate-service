@@ -1,5 +1,5 @@
 service: dash-exchange-rates
-frameworkVersion: '>=1.28.0 <2.0.0'
+frameworkVersion: '3'
 
 # custom domain for API gateway (using route53)
 # https://serverless.com/blog/serverless-api-gateway-domain/
