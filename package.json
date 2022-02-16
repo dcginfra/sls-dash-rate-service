@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nmarley/sls-dash-rate-service.git"
+    "url": "git+https://github.com/dcginfra/sls-dash-rate-service.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nmarley/sls-dash-rate-service/issues"
+    "url": "https://github.com/dcginfra/sls-dash-rate-service/issues"
   },
-  "homepage": "https://github.com/nmarley/sls-dash-rate-service#readme",
+  "homepage": "https://github.com/dcginfra/sls-dash-rate-service#readme",
   "devDependencies": {
     "serverless-domain-manager": "^3.3.2"
   }
