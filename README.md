@@ -13,7 +13,9 @@
 ## Install
 
 ```sh
-sls deploy
+# set AWS_PROFILE here if necessary
+AWS_PROFILE=...
+serverless deploy
 ```
 
 ### Prerequisites
@@ -28,8 +30,8 @@ Test it locally using a local Redis instance:
 ```sh
 docker run -p 127.0.0.1:6379:6379 -d redis:alpine
 
-sls invoke local --function fetch --env REDIS_URL=host.docker.internal:6379
-sls invoke local --function serve --env REDIS_URL=host.docker.internal:6379
+serverless invoke local --function fetch --env REDIS_URL=host.docker.internal:6379
+serverless invoke local --function serve --env REDIS_URL=host.docker.internal:6379
 ```
 
 ### Configuration
@@ -43,7 +45,7 @@ Feel free to copy the `config.example.yaml` file and modify the values therein.
 
 ## Contributing
 
-Feel free to dive in! [Open an issue](https://github.com/nmarley/sls-dash-rate-service/issues/new) or submit PRs.
+Feel free to dive in! [Open an issue](https://github.com/dcginfra/sls-dash-rate-service/issues/new) or submit PRs.
 
 ## License
 
