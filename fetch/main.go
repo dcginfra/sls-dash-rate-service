@@ -127,16 +127,16 @@ func fetchAndStoreRates() error {
 			defer wg.Done()
 			rate, err := api.FetchRate()
 			if err != nil {
-				fmt.Fprintf(os.Stderr, "error: %v", err.Error())
+				fmt.Fprintf(os.Stderr, "error fetching [%s]: %s", api.DisplayName(), err.Error())
 				return
 			}
 
 			usdRate, err := getDashRateInUSD(rateBitcoinUSD, api.DisplayName(), rate)
 			if err != nil {
-				fmt.Fprintf(os.Stderr, "error: %v", err.Error())
+				fmt.Fprintf(os.Stderr, "error getting Dash rate in USD: %v", err.Error())
 				return
 			}
-			fmt.Printf("rate for %s: %+v\n", api.DisplayName(), usdRate)
+			fmt.Printf("USD rate for %s: %+v\n", api.DisplayName(), usdRate)
 
 			// set the value w/a expiration (future calls to set will reset the
 			// ttl)
