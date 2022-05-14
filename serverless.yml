@@ -48,7 +48,9 @@ functions:
   fetch:
     handler: bin/fetch
     events:
-      - schedule: rate(30 minutes)
+      - schedule:
+          rate: rate(30 minutes)
+          enabled: true
     tags:
       name: "Dash Exchange Rates Fetch Lambda"
     vpc: ${file(config.${self:provider.stage}.yaml):vpc}
