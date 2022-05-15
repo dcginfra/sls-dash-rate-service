@@ -27,11 +27,11 @@ provider:
   memorySize: 256
   timeout: 20
   stackTags:
-    app: "DashRateAPI"
-    name: "DashExchangeRateCFStack"
+    App: "DashRateAPI"
+    Name: "DashExchangeRateCFStack"
 
   tags:
-    name: "Dash Rate API"
+    Name: "Dash Rate API"
 
   # you can define service wide environment variables here
   environment:
@@ -52,7 +52,7 @@ functions:
           rate: rate(30 minutes)
           enabled: true
     tags:
-      name: "Dash Exchange Rates Fetch Lambda"
+      Name: "Dash Exchange Rates Fetch Lambda"
     vpc: ${file(config.${self:provider.stage}.yaml):vpc}
 
   # set up the serve function
@@ -63,5 +63,5 @@ functions:
           path: exchange
           method: get
     tags:
-      name: "Dash Exchange Rates API Service"
+      Name: "Dash Exchange Rates API Service"
     vpc: ${file(config.${self:provider.stage}.yaml):vpc}
