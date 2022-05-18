@@ -19,7 +19,8 @@ custom:
 
 provider:
   name: aws
-  runtime: go1.x
+  runtime: provided.al2
+  architecture: arm64
 
   # you can overwrite defaults here
   stage: dev
@@ -37,16 +38,11 @@ provider:
   environment:
     REDIS_URL: ${file(config.${self:provider.stage}.yaml):redisURL}
 
-package:
-  patterns:
-    - "!./**"
-    - "./bin/**"
-
 functions:
 
   # set up the fetch function
   fetch:
-    handler: bin/fetch
+    handler: bootstrap
     events:
       - schedule:
           rate: rate(30 minutes)
@@ -54,10 +50,14 @@ functions:
     tags:
       Name: "Dash Exchange Rates Fetch Lambda"
     vpc: ${file(config.${self:provider.stage}.yaml):vpc}
+    package:
+      individually: true  # required for bootstrap
+      # Explicitly set the package artifact to deploy (overrides native packaging behavior)
+      artifact: ./package/fetch.zip
 
   # set up the serve function
   serve:
-    handler: bin/serve
+    handler: bootstrap
     events:
       - http:
           path: exchange
@@ -65,3 +65,7 @@ functions:
     tags:
       Name: "Dash Exchange Rates API Service"
     vpc: ${file(config.${self:provider.stage}.yaml):vpc}
+    package:
+      individually: true  # required for bootstrap
+      # Explicitly set the package artifact to deploy (overrides native packaging behavior)
+      artifact: ./package/serve.zip

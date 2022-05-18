@@ -1,13 +1,20 @@
-.PHONY: build clean deploy gomodgen
+.PHONY: clean build package
 
 build: gomodgen
-	env GOOS=linux go build -ldflags="-s -w" -o bin/fetch fetch/main.go
-	env GOOS=linux go build -ldflags="-s -w" -o bin/serve serve/main.go
+	env GOOS=linux GOARCH=arm64 go build -ldflags="-s -w" -tags lambda.norpc -o fetch/bootstrap fetch/main.go
+	env GOOS=linux GOARCH=arm64 go build -ldflags="-s -w" -tags lambda.norpc -o serve/bootstrap serve/main.go
+
+package: build
+	mkdir -pv ./package
+	zip package/fetch.zip --filesync --junk-paths fetch/bootstrap
+	zip package/serve.zip --filesync --junk-paths serve/bootstrap
 
 clean:
-	rm -rf ./bin
+	rm -rf ./package/*zip
+	rm -f ./fetch/bootstrap
+	rm -f ./serve/bootstrap
 
-deploy: clean build
+deploy: clean build package
 	serverless deploy --verbose
 
 gomodgen:
