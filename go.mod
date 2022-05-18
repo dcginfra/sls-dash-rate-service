@@ -1,9 +1,9 @@
 module github.com/dcginfra/sls-dash-rate-service
 
-go 1.17
+go 1.18
 
 require (
-	github.com/aws/aws-lambda-go v1.6.0
+	github.com/aws/aws-lambda-go v1.31.0
 	github.com/dcginfra/dashrates v0.3.0
 	github.com/go-redis/redis v6.15.9+incompatible
 )
